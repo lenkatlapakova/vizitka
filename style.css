@@ -1,0 +1,227 @@
+html {
+    box-sizing: inherit; 
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    color: rgb(143, 142, 142);
+    line-height: var(--line-height-normal);
+    background:rgb(0, 0, 0);
+    overflow-x: hidden;
+    align-items: center;
+}
+
+.row {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
+section {
+    padding-left:  20px;
+    border-bottom: 20px;
+    
+}
+
+img {
+    padding-left:20px;
+    margin-left:40px;
+    object-fit: contain;
+    max-width: 500px;
+}
+
+.navigace {
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+}
+
+.nav__items {
+    display: flex;
+    list-style: none;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: var(--gutter-medium);
+}
+
+
+.nav__link {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    display: inline-block;
+    height: 20px;
+    background: rgba(174, 242, 235);
+    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.nav__link:hover {
+    color: rgba(174, 242, 235);
+}
+
+.nav__link:hover::after {
+    right: 0;
+    height: 2px;
+    background: rgba(174, 242, 235);
+}
+
+
+h1,
+h2,
+h3 {
+    font-family:  'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    line-height: 1px;
+    color: rgba(174, 242, 235);
+}
+
+.jmeno {
+    line-height: 1;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.hlavicka {
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+        url('./foto/joga.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 20px;
+}
+
+#omne{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+#pic{
+    display: flex;
+}
+
+#pic img{
+    width:300px;
+}
+
+
+
+#intro{
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+
+}
+
+#intro h2{
+font-size: 40px;
+margin-bottom: 20px;
+
+}
+
+
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: rgba(174, 242, 235);
+    text-align: left;
+    padding: 40px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#galerie{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+#galerie img{
+    width: 200px;
+    height:240px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#cloud {
+   text-align: left;
+   margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+     
+}
+#cloud img{
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 30%;
+    margin-right: 50px;
+}
+
+.patka {
+    text-align: center;
+    padding: 5px;
+}
+
+.patka-odkazy {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    list-style: none;
+}
+
+.patka_socky {
+    margin-right: 20px;
+}
+
+.patka_socky-img {
+    height: 40px;
+    width:40px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.nahoru {
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(174, 242, 235);
+    border-radius: 50%;
+    z-index: 10;
+    visibility: hidden;
+    transition: all .4s;
+}
+
